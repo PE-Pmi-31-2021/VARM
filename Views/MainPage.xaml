@@ -1,0 +1,44 @@
+﻿<Page x:Class="LNU_VARM_games.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:LNU_VARM_games"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="MainPage">
+
+    <Page.Resources>
+        <Style x:Key="ButtonStyle">
+            <Setter Property="Button.FontFamily" Value="Segoe Print" />
+            <Setter Property="Button.FontSize" Value="20" />
+            <Setter Property="Button.Background" Value="#FFF3F3A0" />
+            <Setter Property="Button.Foreground" Value="Black" />
+            <Setter Property="Button.HorizontalAlignment" Value="Center" />
+            <Setter Property="Button.VerticalAlignment" Value="Center" />
+            <Setter Property="Button.Margin" Value="30, 0, 30, 0" />
+            <Setter Property="Button.Width" Value="250" />
+            <Setter Property="Button.Height" Value="50" />
+            <Setter Property="Button.Cursor" Value="Hand" />
+        </Style>
+    </Page.Resources>
+
+
+    <Grid Background="#FF38182D">
+        <Label x:Name="MainScreen_Title" Content="VARM games" HorizontalAlignment="Center" Margin="0,50,0,0"
+               VerticalAlignment="Top" FontSize="48" FontFamily="MV Boli" Foreground="#FFFFAD18"/>
+        
+        <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,200,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="button1" Content="Game 1" Grid.Column="0" Grid.Row="0" Click="buttonClick" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button2" Content="Game 2" Grid.Column="1" Grid.Row="0" Click="buttonClick" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button3" Content="Game 3" Grid.Column="2" Grid.Row="0" Click="buttonClick" Style="{StaticResource ButtonStyle}"/>
+        </Grid>
+
+    </Grid>
+</Page>
