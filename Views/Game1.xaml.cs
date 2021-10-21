@@ -50,6 +50,12 @@ namespace LNU_VARM_games
 
         }
 
+        private void Score_button_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+               
+
 
     }
 }

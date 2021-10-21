@@ -32,8 +32,9 @@
 
     <Grid Background="#FF2F1C2E">
         <Label x:Name="GameWindow_GameTitle" Content="Game Name" HorizontalAlignment="Center" Margin="245,24,246.6,0" VerticalAlignment="Top" FontSize="48" FontFamily="MV Boli" Foreground="#FFD68D38" Width="302"/>
-        <Button x:Name="Play_button" Content="Play" Click="Play_button_click" Margin="268,202,275.6,168" Style="{StaticResource ButtonGameMenu}"/>
-        <Button x:Name="Return_to_main_menu_button" Content="Return to main menu" Click="Return_to_main_menu_button_click" Margin="268,271,275.6,99" Style="{StaticResource ButtonGameMenu}"/>
+        <Button x:Name="Play_button" Content="Play" Click="Play_button_click" Margin="271,177,279,223" Style="{StaticResource ButtonGameMenu}"/>
+        <Button x:Name="Score_button" Content="Score" Click="Score_button_click" Margin="271,243,279,157" Style="{StaticResource ButtonGameMenu}"/>
+        <Button x:Name="Return_to_main_menu_button" Content="Return to main menu" Click="Return_to_main_menu_button_click" Margin="271,308,279,92" Style="{StaticResource ButtonGameMenu}"/>
 
     </Grid>
 </Page>
