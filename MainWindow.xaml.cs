@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Npgsql;
 
 namespace LNU_VARM_games
 {
@@ -20,8 +21,13 @@ namespace LNU_VARM_games
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
+            var cs = "Host=localhost;Username=postgres;Password=P_ost38246_gre7s_ql;Database=VARM";
+            var con = new NpgsqlConnection(cs);
+            con.Open();
+
             InitializeComponent();
             Binding binding = new Binding();
             binding.ElementName = "MainFrame1";
@@ -32,6 +38,11 @@ namespace LNU_VARM_games
 
             //MainFrame.Source = new Uri("pack://application:,,,/VARM games TEST;component/Game1.xaml");
             MainFrame.Source = new Uri("pack://application:,,,/VARM games TEST;component/Views/MainPage.xaml");
+        }
+
+        private void MainFrame_Navigated(object sender, NavigationEventArgs e)
+        {
+
         }
     }
 }

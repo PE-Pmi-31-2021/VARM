@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="486.8" Width="850.4">
 
-    <Frame x:Name="MainFrame" Source="{Binding ElementName=MainFrame1, Path=Source}" NavigationUIVisibility="Hidden">
+    <Frame x:Name="MainFrame" Source="{Binding ElementName=MainFrame1, Path=Source}" NavigationUIVisibility="Hidden" Navigated="MainFrame_Navigated">
 
     </Frame>
 </Window>

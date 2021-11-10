@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace LNU_VARM_games
+namespace VARM_games_TEST
 {
     /// <summary>
     /// Interaction logic for App.xaml

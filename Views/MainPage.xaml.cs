@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using VARM_games_TEST.Views;
+//using VARM_games_TEST.Models;
+using VARM_games_TEST;
 
 namespace LNU_VARM_games
 {
@@ -53,5 +56,10 @@ namespace LNU_VARM_games
             //this.Close();
         }
 
+        private void buttonRecClick(object sender, RoutedEventArgs e)
+        {
+            RecordsPage g = new RecordsPage();
+            this.NavigationService.Navigate(g);
+        }
     }
 }
