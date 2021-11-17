@@ -1,17 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Data.Entity;
 using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 
 namespace VARM_games_TEST.Models
 {
-    public class Player
+    public class Game
     {
-        public string name { get; set; }
         [Key]
-        public int id { get; set; }
+        public int gid { get; set; }
+        public string title { get; set; }
         public virtual Record Record { get; set; }
     }
 }

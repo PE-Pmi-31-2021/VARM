@@ -7,11 +7,14 @@ using System.ComponentModel.DataAnnotations;
 
 namespace VARM_games_TEST.Models
 {
-    public class Player
+    public class Record
     {
-        public string name { get; set; }
         [Key]
+        public int rec_id { get; set; }
+        public int rec { get; set; }
         public int id { get; set; }
-        public virtual Record Record { get; set; }
+        public int gid { get; set; }
+        public virtual List<Game> Games { get; set; }
+        public virtual List<Player> Players { get; set; }
     }
 }
