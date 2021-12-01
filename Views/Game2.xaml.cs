@@ -17,9 +17,9 @@ using VARM_games_TEST.Views;
 
 namespace LNU_VARM_games
 {
-    public partial class Game1 : Page
+    public partial class Game2 : Page
     {
-        public Game1()
+        public Game2()
         {
             InitializeComponent();
         }
@@ -34,8 +34,8 @@ namespace LNU_VARM_games
         private void Play_button_click(object sender, RoutedEventArgs e)
         {
 
-            RandNumbers gamerand = new RandNumbers();
-            this.NavigationService.Navigate(gamerand);
+            MemPairs mp = new MemPairs();
+            this.NavigationService.Navigate(mp);
         }
 
         private void Home_click(object sender, RoutedEventArgs e)

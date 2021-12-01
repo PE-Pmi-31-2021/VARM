@@ -119,10 +119,23 @@
     <Compile Include="Models\Game.cs" />
     <Compile Include="Models\Player.cs" />
     <Compile Include="Models\Record.cs" />
+    <Compile Include="Views\Game2.xaml.cs">
+      <DependentUpon>Game2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MemPairs.xaml.cs">
+      <DependentUpon>MemPairs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RandNumbers.xaml.cs">
+      <DependentUpon>RandNumbers.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RecordsPage.xaml.cs">
       <DependentUpon>RecordsPage.xaml</DependentUpon>
     </Compile>
     <Page Include="Views\Game1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Game2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -148,6 +161,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\MemPairs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RandNumbers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RecordsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

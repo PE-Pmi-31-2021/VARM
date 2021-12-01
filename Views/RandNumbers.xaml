@@ -1,4 +1,5 @@
-﻿<Page x:Class="LNU_VARM_games.Game1"
+﻿<!--<Page x:Class="LNU_VARM_games.RandNumbers"-->
+    <Page x:Class="VARM_games_TEST.Views.RandNumbers"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,7 +7,7 @@
       xmlns:local="clr-namespace:LNU_VARM_games"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Game1">
+      Title="RandNumbers">
 
     <Page.Resources>
         <Style x:Key="ButtonStyle">
@@ -22,8 +23,6 @@
         <Style x:Key="ButtonGameMenu" BasedOn="{StaticResource ButtonStyle}">
             <Setter Property="Button.FontFamily" Value="Segoe UI" />
             <Setter Property="Button.FontStyle" Value="Italic" />
-            <!--<Setter Property="Button.VerticalContentAlignment" Value="Center" />
-            <Setter Property="Button.HorizontalContentAlignment" Value="Center" />-->
             <Setter Property="Button.VerticalAlignment" Value="Center" />
             <Setter Property="Button.HorizontalAlignment" Value="Center" />
             <Setter Property="Button.Background" Value="#FFE0C854" />
@@ -31,9 +30,24 @@
     </Page.Resources>
 
     <Grid Background="#FF2F1C2E">
-        <Label x:Name="GameWindow_GameTitle" Content="Random numbers" HorizontalAlignment="Center" Margin="192,28,201,0" VerticalAlignment="Top" FontSize="48" FontFamily="MV Boli" Foreground="#FFD68D38" Width="407" RenderTransformOrigin="0.501,0.485"/>
-        <Button x:Name="Play_button" Content="Play" Click="Play_button_click" Margin="268,202,275.6,168" Style="{StaticResource ButtonGameMenu}"/>
-        <Button x:Name="Score_button" Content="Score" Click="Score_button_click" Margin="268,271,275.6,99" Style="{StaticResource ButtonGameMenu}"/>
+        <TextBlock  x:Name="Status_block" Margin="10,84,10,0" 
+                   Foreground="#FFD68D38" FontSize="42" TextAlignment="Center"
+                   FontFamily="MV Boli" Height="66" VerticalAlignment="Top"> Game
+        </TextBlock>
+
+        <TextBlock  x:Name="Score_block"  Margin="0,10,10,0" 
+                   Foreground="#FFD68D38" FontSize="30" TextAlignment="Right"
+                   FontFamily="MV Boli" Width="184" HorizontalAlignment="Right" Height="49" VerticalAlignment="Top"> Score: 0
+        </TextBlock>
+
+        <TextBox Name="textBox1" FontSize="35" TextAlignment="Center" Margin="166,165,166,0"
+                 FontFamily="Segoe Print" KeyDown="textBox1_KeyDown" IsEnabled = "False"
+                 Background="#FFE0C854" Focusable = "True" Height="67" VerticalAlignment="Top" />
+
+
+        <Button x:Name="Start_button_numb" Content="Play" Click="Start_button_click"
+                Margin="275,280,275,120" Style="{StaticResource ButtonGameMenu}"
+                VerticalAlignment="Center" HorizontalAlignment="Center" Width="250" Height="50"/>
 
         <Button x:Name="Home_button" Width="70" Margin="7,5,0,0" 
                 Click="Home_click" Background="#FF2F1C2E" BorderBrush="#FF2F1C2E" Height="59" VerticalAlignment="Top" HorizontalAlignment="Left" >

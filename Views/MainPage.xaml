@@ -36,7 +36,7 @@
             </Grid.ColumnDefinitions>
 
             <Button x:Name="button1" Content="Game 1" Grid.Column="0" Grid.Row="0" Click="buttonClick" Style="{StaticResource ButtonStyle}"/>
-            <Button x:Name="button2" Content="Game 2" Grid.Column="1" Grid.Row="0" Click="buttonClick" Style="{StaticResource ButtonStyle}"/>
+            <Button x:Name="button2" Content="Game 2" Grid.Column="1" Grid.Row="0" Click="buttonMemClick" Style="{StaticResource ButtonStyle}"/>
             <Button x:Name="button3" Content="Game 3" Grid.Column="2" Grid.Row="0" Click="buttonClick" Style="{StaticResource ButtonStyle}"/>
         </Grid>
         <Button x:Name="button1_Copy" Content="Show Records" Grid.Column="0" Grid.Row="0" Click="buttonRecClick" Style="{StaticResource ButtonStyle}" Margin="277,390,273,9.6"/>

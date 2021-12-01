@@ -61,5 +61,17 @@ namespace LNU_VARM_games
             RecordsPage g = new RecordsPage();
             this.NavigationService.Navigate(g);
         }
+
+        private void buttonMemClick(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.ElementName = "MainFrame1";
+            binding.Path = new PropertyPath("Source");
+
+
+
+            Game2 g = new Game2();
+            this.NavigationService.Navigate(g);
+        }
     }
 }
