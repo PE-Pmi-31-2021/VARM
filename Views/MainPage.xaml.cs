@@ -73,5 +73,17 @@ namespace LNU_VARM_games
             Game2 g = new Game2();
             this.NavigationService.Navigate(g);
         }
+
+        private void buttonTicClick(object sender, RoutedEventArgs e)
+        {
+            Binding binding = new Binding();
+            binding.ElementName = "MainFrame1";
+            binding.Path = new PropertyPath("Source");
+
+
+
+            TicTacToe g = new TicTacToe();
+            this.NavigationService.Navigate(g);
+        }
     }
 }

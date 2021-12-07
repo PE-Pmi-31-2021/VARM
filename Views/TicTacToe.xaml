@@ -1,0 +1,54 @@
+﻿<Page x:Class="VARM_games_TEST.Views.TicTacToe"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VARM_games_TEST.Views"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TicTacToe">
+    <Grid Background="#FF2F1C2E">
+        <TextBlock Text="Tic Tac Toe" FontSize="48" TextAlignment="Center" Foreground="#FFD68D38" FontWeight="ExtraBold" FontFamily="MV Boli"/>
+        <Grid Name="GameGrid">
+            <TextBlock Name="whosRound" Text="Player round: O" Foreground="#FFD68D38" FontSize="36" TextAlignment="Center" FontWeight="ExtraBold" Margin="0,50,0,319" FontFamily="MV Boli"/>
+            <Grid Margin="190,100,273,50">
+                <Button Tag="B_1" Click="B_Click" Margin="22,0,216,178">
+                    <TextBlock Name="T_1" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_2" Click="B_Click" Margin="118,0,116,178">
+                    <TextBlock Name="T_2" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_3" Click="B_Click" Margin="218,0,22,178">
+                    <TextBlock Name="T_3" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_4" Click="B_Click" Margin="22,96,216,82">
+                    <TextBlock Name="T_4" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_5" Click="B_Click" Margin="118,96,116,82">
+                    <TextBlock Name="T_5" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_6" Click="B_Click" Margin="218,97,22,82">
+                    <TextBlock Name="T_6" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_7" Click="B_Click" Margin="22,192,216,-14">
+                    <TextBlock Name="T_7" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_8" Click="B_Click" Margin="118,193,116,-15">
+                    <TextBlock Name="T_8" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+                <Button Tag="B_9" Click="B_Click" Margin="218,193,22,-14">
+                    <TextBlock Name="T_9" Text=" " FontSize="72" VerticalAlignment="Center" />
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid Name="GameOverGrid">
+            <TextBlock Name="WhosWin" Margin="117,59,88,220" FontFamily="MV Boli" Foreground="#FFD68D38" FontSize="48"/>
+            <Button Name="Exit" Click="ExitGame" Margin="46,297,494,54.6">
+                <TextBlock Text="Exit" FontSize="48" FontFamily="MV Boli" Foreground="#FFD68D38"/>
+            </Button>
+            <Button Name="PlayAgain" Click="RestartGame" Margin="483,297,69,54.6">
+                <TextBlock Text="Play Again" FontSize="48" FontFamily="MV Boli" Foreground="#FFD68D38"/>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

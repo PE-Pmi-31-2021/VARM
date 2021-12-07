@@ -31,8 +31,6 @@ namespace VARM_games_TEST.Views
             InitializeComponent();
             using (var db = new Model1())
             {
-
-                
                 db.games.Load();
                 db.records.Load();
                 db.players.Load();
@@ -40,6 +38,9 @@ namespace VARM_games_TEST.Views
                 var query = from b in db.games
                             orderby b.title
                             select b;
+                foreach (var b in query)
+                { Console.WriteLine("QUERYING:"+b.ToString());}
+                
                 var query1 = from b in db.players
                             orderby b.name
                             select b;
@@ -48,6 +49,8 @@ namespace VARM_games_TEST.Views
                              select b;
                 //List<Output> o = new List<Output>();
                 recordsGrid.ItemsSource = db.games.Local;
+                recordsGrid.ItemsSource = db.records.Local;
+                recordsGrid.ItemsSource = db.players.Local;
             }
 
 

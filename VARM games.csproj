@@ -131,6 +131,9 @@
     <Compile Include="Views\RecordsPage.xaml.cs">
       <DependentUpon>RecordsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\TicTacToe.xaml.cs">
+      <DependentUpon>TicTacToe.xaml</DependentUpon>
+    </Compile>
     <Page Include="Views\Game1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +173,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RecordsPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\TicTacToe.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
