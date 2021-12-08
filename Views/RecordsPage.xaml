@@ -9,18 +9,26 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="RecordsPage">
 
-    <Grid>
+    <Grid  Background="#FF2F1C2E">
         <Grid.RowDefinitions>
             <RowDefinition />
-            <RowDefinition Height="Auto" MinHeight="25.6" />
+            <RowDefinition Height="Auto" MinHeight="32.8" />
         </Grid.RowDefinitions>
-        <DataGrid x:Name="recordsGrid" SelectionChanged="recordsGrid_SelectionChanged" Margin="2,0,2,-0.4" Grid.RowSpan="2" Foreground="#FF2F1C2E" Background="#FF2F1C2E" FontFamily="MV Boli" HorizontalAlignment="Center" ItemsSource="{Binding Mode=OneWay}" Width="796">
+        <DataGrid x:Name="recordsGrid" AutoGenerateColumns="False"  SelectionChanged="recordsGrid_SelectionChanged" Margin="2,0,525,-0.4" Grid.RowSpan="2" Foreground="#FF2F1C2E" Background="#FF2F1C2E" FontFamily="MV Boli" HorizontalAlignment="Center" ItemsSource="{Binding Mode=OneWay}" Width="273">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding name}" Header="Player" Width="265"/>
-                <DataGridTextColumn Binding="{Binding  title}" Header="Game" Width="265"/>
-                <DataGridTextColumn Binding="{Binding  rec}" Header="Record" Width="265"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="Back" HorizontalAlignment="Left" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" FontFamily="MV Boli" Click="Button_Click"/>
+        <Button Content="Back" HorizontalAlignment="Left" Margin="10,2.2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="75" FontFamily="MV Boli" Click="Button_Click" Height="22"/>
+        <DataGrid x:Name="recordsGrid_Copy" AutoGenerateColumns="False"  SelectionChanged="recordsGrid_SelectionChanged" Margin="280,0,264,-0.4" Grid.RowSpan="2" Foreground="#FF2F1C2E" Background="#FF2F1C2E" FontFamily="MV Boli" HorizontalAlignment="Center" ItemsSource="{Binding Mode=OneWay}" Width="256">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding title}" Header="Game" Width="265"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DataGrid x:Name="recordsGrid_Copy1" AutoGenerateColumns="False"  SelectionChanged="recordsGrid_SelectionChanged" Margin="541,0,0,-0.4" Grid.RowSpan="2" Foreground="#FF2F1C2E" Background="#FF2F1C2E" FontFamily="MV Boli" HorizontalAlignment="Center" ItemsSource="{Binding Mode=OneWay}" Width="259">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding rec}" Header="Record" Width="265"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Page>

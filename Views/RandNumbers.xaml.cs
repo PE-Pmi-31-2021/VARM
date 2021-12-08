@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using LNU_VARM_games;
+using NLog;
 
 namespace VARM_games_TEST.Views
 {
@@ -24,6 +25,7 @@ namespace VARM_games_TEST.Views
 
     public partial class RandNumbers : Page
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private int randnum1 = 1;
         private int randnum2 = 10;
         private int score = 0;
@@ -52,6 +54,7 @@ namespace VARM_games_TEST.Views
             Keyboard.Focus(textBox1);
             Status_block.Text = "Put your answer here";
             Start_button_numb.IsEnabled = false;
+            logger.Debug("Randnumbers started");
         }
 
         async private void textBox1_KeyDown(object sender, KeyEventArgs e)
@@ -89,6 +92,7 @@ namespace VARM_games_TEST.Views
         {
             MainPage mainPage = new MainPage();
             this.NavigationService.Navigate(mainPage);
+            logger.Debug("Randnumbers to MainPage");
         }
     }
 }

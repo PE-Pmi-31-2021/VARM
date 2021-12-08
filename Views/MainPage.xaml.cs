@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using VARM_games_TEST.Views;
 //using VARM_games_TEST.Models;
+using NLog;
 using VARM_games_TEST;
 
 namespace LNU_VARM_games
@@ -23,6 +24,7 @@ namespace LNU_VARM_games
     /// </summary>
     public partial class MainPage : Page
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public MainPage()
         {
             InitializeComponent();
@@ -40,26 +42,28 @@ namespace LNU_VARM_games
 
             Game1 g = new Game1();
             this.NavigationService.Navigate(g);
+            logger.Debug("MainPage to RandNumbers");
+            
 
+        //MainFrame.Source = new Uri("pack://application:,,,/VARM games TEST;component/Game1.xaml");
 
-            //MainFrame.Source = new Uri("pack://application:,,,/VARM games TEST;component/Game1.xaml");
+        //Game1 g = new Game1();
+        //this.Content = g;
+        //MainFrame.Source = new Uri("Game1.xaml");
+        //GameWindow g_win = new GameWindow();
+        //g_win.Owner = this;
+        //g_win.WindowStartupLocation = WindowStartupLocation.CenterOwner;
+        //g_win.Show();
 
-            //Game1 g = new Game1();
-            //this.Content = g;
-            //MainFrame.Source = new Uri("Game1.xaml");
-            //GameWindow g_win = new GameWindow();
-            //g_win.Owner = this;
-            //g_win.WindowStartupLocation = WindowStartupLocation.CenterOwner;
-            //g_win.Show();
-
-            //g_win.Owner = null;
-            //this.Close();
-        }
+        //g_win.Owner = null;
+        //this.Close();
+    }
 
         private void buttonRecClick(object sender, RoutedEventArgs e)
         {
             RecordsPage g = new RecordsPage();
             this.NavigationService.Navigate(g);
+            logger.Debug("MainPage to Records Table");
         }
 
         private void buttonMemClick(object sender, RoutedEventArgs e)
@@ -72,6 +76,7 @@ namespace LNU_VARM_games
 
             Game2 g = new Game2();
             this.NavigationService.Navigate(g);
+            logger.Debug("MainPage to RandNumbers");
         }
 
         private void buttonTicClick(object sender, RoutedEventArgs e)
@@ -84,6 +89,7 @@ namespace LNU_VARM_games
 
             TicTacToe g = new TicTacToe();
             this.NavigationService.Navigate(g);
+            logger.Debug("MainPage to TicTacToe");
         }
     }
 }

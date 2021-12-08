@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using NLog;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace VARM_games_TEST.Views
     /// </summary>
     public partial class MemPairs : Page
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public int counter = 0;
         public int value = 0;
         Stopwatch s = new Stopwatch();
@@ -87,6 +89,7 @@ namespace VARM_games_TEST.Views
             //DynamicGrid.Children.Add(rec);
 
             //this.Content = DynamicGrid;
+            logger.Error("Just kidding. Mempairs started");
         }
 
         private void ClearRectangles()

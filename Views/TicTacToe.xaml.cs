@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using NLog;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -21,6 +22,7 @@ namespace VARM_games_TEST.Views
     /// </summary>
     public partial class TicTacToe : Page
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         private bool isX = false;
 
         int[] filledGrid = new int[9]; //0 -> Unfilled, 1 -> O, 2 -> X
@@ -36,6 +38,7 @@ namespace VARM_games_TEST.Views
         {
             InitializeComponent();
             GameOverGrid.Visibility = Visibility.Hidden; //Hide GameOver Grid
+            logger.Debug("TicTacToe started");
         }
 
         private void CheckIfAnyoneWin()
@@ -54,6 +57,7 @@ namespace VARM_games_TEST.Views
             GameGrid.Visibility = Visibility.Hidden; //Hide Game Grid
             GameOverGrid.Visibility = Visibility.Visible; //Show GameOver Grid
             WhosWin.Text = (state == 0) ? "Draw" : ("Winner is: " + ((state == 1) ? "O" : "X"));
+            logger.Debug("TicTacToe session ended successfully");
         }
 
         private void B_Click(object sender, RoutedEventArgs e)
@@ -80,6 +84,7 @@ namespace VARM_games_TEST.Views
             //Application.Current.Shutdown();
             MainPage g = new MainPage();
             this.NavigationService.Navigate(g);
+            logger.Debug("TicTacToe to MainPage");
         }
 
         private void RestartGame(object sender, RoutedEventArgs e)
@@ -97,6 +102,7 @@ namespace VARM_games_TEST.Views
             //Change Grids visibility
             GameGrid.Visibility = Visibility.Visible; //Show Game Grid
             GameOverGrid.Visibility = Visibility.Hidden; //Hide GameOver Grid
+            logger.Debug("TicTacToe restarted");
         }
     }
 }

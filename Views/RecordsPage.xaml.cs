@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using NLog;
 using VARM_games_TEST.Models;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -26,6 +27,7 @@ namespace VARM_games_TEST.Views
     /// </summary>
     public partial class RecordsPage : Page
     {
+        private static Logger logger = LogManager.GetCurrentClassLogger();
         public RecordsPage()
         {
             InitializeComponent();
@@ -34,23 +36,13 @@ namespace VARM_games_TEST.Views
                 db.games.Load();
                 db.records.Load();
                 db.players.Load();
-
-                var query = from b in db.games
-                            orderby b.title
-                            select b;
-                foreach (var b in query)
-                { Console.WriteLine("QUERYING:"+b.ToString());}
+                logger.Debug("Records table opened");
+                var players = db.players.Local.ToList();
+                foreach (var b in players) { Console.WriteLine("----research"+Convert.ToString(b)+"\n"); }
                 
-                var query1 = from b in db.players
-                            orderby b.name
-                            select b;
-                var query2 = from b in db.records
-                             orderby b.rec
-                             select b;
-                //List<Output> o = new List<Output>();
-                recordsGrid.ItemsSource = db.games.Local;
-                recordsGrid.ItemsSource = db.records.Local;
                 recordsGrid.ItemsSource = db.players.Local;
+                recordsGrid_Copy.ItemsSource = db.games.Local;
+                recordsGrid_Copy1.ItemsSource = db.records.Local;
             }
 
 
@@ -65,6 +57,7 @@ namespace VARM_games_TEST.Views
         {
             MainPage g = new MainPage();
             this.NavigationService.Navigate(g);
+            logger.Debug("Records to MainPage");
         }
     }
     //public class Output

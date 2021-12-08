@@ -42,7 +42,7 @@
             </Grid>
         </Grid>
         <Grid Name="GameOverGrid">
-            <TextBlock Name="WhosWin" Margin="117,59,88,220" FontFamily="MV Boli" Foreground="#FFD68D38" FontSize="48"/>
+            <TextBlock Name="WhosWin" Margin="117,59,88,220" TextAlignment="Center" FontFamily="MV Boli" Foreground="#FFD68D38" FontSize="48"/>
             <Button Name="Exit" Click="ExitGame" Margin="46,297,494,54.6">
                 <TextBlock Text="Exit" FontSize="48" FontFamily="MV Boli" Foreground="#FFD68D38"/>
             </Button>
